@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Перевід у морзе</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+</head>
+<body>
+
+<style>
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+</style>
+
+<script src="js/parse.js"></script>
+<script src="js/letToSymb.js"></script>
+<script src="js/symbToLet.js"></script>
+<script src="js/langCoise.js"></script>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container pb-5">
+    <h1 class="display-4">Перекладач на морзе  <span class="text-info">Beta</span> </h1>
+
+    <p class="lead">Щоб перекла<b class="text-primary">с</b>ти текст натисніть кнопку.</p>
+
+    <div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text">Ввести текст</span>
+		  </div>
+		  <input type="text" class="form-control" id="input_text">
+  		  <div class="input-group-append">
+    			<button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="test()">Перекласти</button>
+  		  </div>
+		</div>
+
+		<div class="input-group my-5">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text">Перекладений тек<i class="text-info">ст</i></span>
+		  </div>
+		  	<textarea class="form-control" aria-label="With textarea" id="output_text"></textarea>
+		</div>
+  </div>
+
+
+
+
+  <div class="container py-5">
+    <h1 class="display-4">Перекладaч на людську мову</h1>
+    <p class="lead">Щоб перекласти тек<i class="text-info">ст</i> натисніть виберыть мову і натисніть кнопку.</p>
+    <div class="input-group">
+    <!--
+
+
+     dropdown 
+
+
+    -->
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button type="button" class="btn btn-outline-warning" onclick="test1();">Перекласти</button>
+    <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" onclick="Choise(1);">En</a>
+      <a class="dropdown-item not-active text-secondary">Ua</a>
+      <a class="dropdown-item" onclick="Choise(3);">Ru</a>
+    </div>
+  </div>
+  <input id="symbols" type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+</div>
+<!-- 
+
+
+End of dropdown
+
+
+ -->
+		<div class="input-group my-5">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text">Переведений тек<i class="text-info">ст</i></span>
+		  </div>
+		  	<textarea class="form-control" aria-label="With textarea" id="output_text_ch"></textarea>
+		</div>
+  </div>
+  <p class="text-secondary text-center">made by illyash06</p>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+
+</body>
+</html>	
